@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export const Movie = () => {
-  return (
-    <div>
-      <h2> Movie Title </h2>
-      <p> Movie Desc </p>
-    </div>
-  );
+export class Movie extends Component {
+  componentDidMount() {}
+  render() {
+    return (
+      <div>
+        <h2> {this.props.match.params.name} </h2>
+        <p> Movie Desc </p>
+      </div>
+    ); 
+  }
 }
