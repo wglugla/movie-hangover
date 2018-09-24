@@ -11,8 +11,10 @@ export class App extends Component {
       <Router>
         <div>
           <Link to='/'> Home </Link>
-          <Route exact path='/' component={AppHeader} />
-          {/* <Route path='/movie/:name' component={Movie} /> */}
+          <Switch>
+            <Route exact path='/' component={AppHeader} />
+            {/* <Route path='/movie/:name' component={Movie} /> */}
+          </Switch>
         </div>
       </Router>
     );
