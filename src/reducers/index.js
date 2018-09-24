@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-import { movie } from './movie';
+import { moviesList } from "./moviesList";
+import { searchedPhrase } from './searchedPhrase';
 
 export default combineReducers({
-  movie
+  moviesList,
+  searchedPhrase
 });
