@@ -14,7 +14,6 @@ export const moviesFetched = (movies) => ({
 });
 
 export const fetchMovies = () => (dispatch, getState) => {
-  console.log(getState().searchedPhrase);
   fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-EN&query=${encodeURIComponent(getState().searchedPhrase)}`)
   .then(res => {
     if (!res.ok) throw Error(res.statusText);
@@ -23,7 +22,6 @@ export const fetchMovies = () => (dispatch, getState) => {
   .then(json => {
     if (json.total_results === 0) throw Error ('not found');
     dispatch(moviesFetched(json.results))
-    console.log(json.results);
   })
   .catch((error) => {
     console.error(error);

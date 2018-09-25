@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormContainer } from './SearchForm/SearchForm';
+import SearchForm from './SearchForm/SearchForm';
 
 export const AppHeader = () => {
   return (
@@ -10,7 +10,9 @@ export const AppHeader = () => {
       <p >
         To get started, edit <code>src/App.js</code> and save to reload.
       </p>
-      <FormContainer />
+      <SearchForm />
     </div>
   );
 }
+
+export default AppHeader;

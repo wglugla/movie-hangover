@@ -25,21 +25,18 @@ export class SearchForm extends Component {
   }
 
   handleSearchChange = e => {
-    console.log('input');
     this.setState ({ 
       search: e.currentTarget.value 
     })
   };  
 
   handleSearch = e => {
-    console.log('search');
     e.preventDefault();
     this.props.changePhraseAndFetch(this.state.search);
   };
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     phrase: state.phrase
   };
@@ -47,7 +44,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = { changePhraseAndFetch };
 
-export const FormContainer = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(SearchForm)
+
