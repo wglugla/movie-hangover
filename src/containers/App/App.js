@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
+import AsyncComponent from '../../components/shared/AsyncComponent';
 
 import AppHeader from '../../components/AppHeader/AppHeader';
-import MoviesList from '../../components/MoviesList/MoviesList';
 
 export class App extends Component {
   componentDidMount(){};
@@ -12,20 +12,30 @@ export class App extends Component {
       <Router>
         <div>
           <Link to='/'> Home </Link>
-          <Link to='/moviesList'> List </Link>
           <AppHeader />
           <Switch>
-            <Route 
-              path='/moviesList' 
-              render={ () => {
-                return <MoviesList movies={this.props.movies} /> 
-              }}
-            />
+            <Route exact component={this.maybeRenderMoviesList} />
           </Switch>
         </div>
       </Router>
     );
   }
+  maybeRenderMoviesList = () => {
+    if (this.props.movies.length < 1) {
+      console.log("Brak");
+      return null;
+    }
+    console.log("Jest");
+    return (
+      <AsyncComponent
+        componentProps={{ movies: this.props.movies }}
+        componentProvider={() => 
+          import('../../components/MoviesList/MoviesList')
+          .then(module => module.MoviesList)
+        }
+      />
+    );
+  };
 }
 
 const mapStateToProps = (state) => {
