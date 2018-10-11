@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 export const Movie = (movieInfo) => {
-  const { title } = movieInfo;
+  const { id, title } = movieInfo;
   return (
-    <li className="moviesList__element">
-      <h2 className="moviesList__title"> {title} </h2>
-    </li>
+    <Link to={`/movie/${id}`} >
+      <li className="moviesList__element">
+        <h2 className="moviesList__title"> {title} </h2>
+      </li>
+    </Link>
   ); 
 };
 
