@@ -29,8 +29,8 @@ Użytkownik może użyć filtrów, które pozwalają mu na sprawniejsze przeglą
 ## Funkcje, które zamierzam zaimplementować
 
 - [x] Formularz, dzięki któremu użytkownik otrzymuje odpowiedź od tmbD API z listą tytułów filmów zawierających wskazaną frazę.
-- [ ] Lista filmów zgodnych z wyszukiwaną frazą
-- [ ] Szczegółowe informacje o filmie
+- [x] Lista filmów zgodnych z wyszukiwaną frazą
+- [x] Szczegółowe informacje o filmie
 - [ ] Lista filmów polecanych przez aplikację na podstawie danego filmu
 - [ ] Filtry do listy filmów polecanych, pozwalających na przegląd filmów skojarzonych z gatunkiem, reżyserem bądź danym aktorem
 - [ ] Sortowanie listy filmów polecanych na podstawie oceny użytkowników tmbD lub nazwy, gatunku, trafności aktorów (trafność - ilość aktorów, którzy wystąpili w wybranym oraz poleconym filmie)
