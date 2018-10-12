@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const MovieDescription = (movie) => {
-  console.log(movie.props);
   const { title, overview, popularity, vote_average } = movie.props;
   return (
     <div>
