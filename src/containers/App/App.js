@@ -11,13 +11,13 @@ export class App extends Component {
   componentDidMount(){};
   render() {
     return (
-      <Router>
+      <Router basename={`/movie-hangover`}>
         <div>
-          <Link to='/'> Home </Link>
+          <Link to={`/`}> Home </Link>
           {/* <AppHeader /> */}
           <Route exact component={SearchForm} />
-          <Route exact path='/' component={this.maybeRenderMoviesList} />
-          <Route path='/movie/:id' component={MovieDetails} />
+          <Route exact path={`/moviesList`} component={this.maybeRenderMoviesList} />
+          <Route path={`/movie/:id`} component={MovieDetails} />
         </div>
       </Router>
     );

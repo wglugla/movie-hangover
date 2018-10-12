@@ -32,7 +32,7 @@ export class SearchForm extends Component {
   handleSearch = (e) => {
     e.preventDefault();
     this.props.changePhraseAndFetch(this.state.search);
-    this.props.history.push('/');
+    this.props.history.push(`/moviesList`);
   };
 }
 
