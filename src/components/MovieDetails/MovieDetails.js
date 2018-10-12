@@ -1,6 +1,8 @@
 import React, { Component }from 'react';
 import { connect } from 'react-redux';
 
+import MovieDescription from './MovieDescription/MovieDescription';
+
 export class MovieDetails extends Component {
   state = {
     currentMovie: {}
@@ -10,7 +12,7 @@ export class MovieDetails extends Component {
   }
   render() {
     return (
-      this.state.currentMovie ? <h1> {this.state.currentMovie.title} </h1> : <p> Error </p>
+      this.state.currentMovie ? <MovieDescription props={this.state.currentMovie} /> : <p> Error </p>
     );
   }
   filterMovies = () => {
@@ -20,6 +22,7 @@ export class MovieDetails extends Component {
     })
   }
 };
+
 
 const mapStateToProps = (state) => {
   return {
