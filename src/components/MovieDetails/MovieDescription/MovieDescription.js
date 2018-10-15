@@ -1,13 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export const MovieDescription = (movie) => {
-  const { title, overview, popularity, vote_average } = movie.props;
+export const MovieDescription = (props) => {
+  const { title, overview, vote_average } = props.currentMovie;
+  const { name } = props.director;
+  const cast = props.cast; 
   return (
     <div>
       <h1> {title} </h1>
       <h2> Vote: {vote_average}</h2>
-      <h3> Popularity: {popularity}</h3>
       <p> {overview} </p>
+      <h3> Director: {name} </h3>
+      <h3> Actors: </h3>
+      <ul>
+        {cast.map(el => <li key={el.id}> {el.name} </li>)}
+      </ul> 
     </div>
   );
 };
