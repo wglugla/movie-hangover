@@ -1,18 +1,14 @@
-
-
-
-
 # [PL] Struktura aplikacji movie-hangover
 
-## Przeznaczenie aplikacji 
+## Przeznaczenie aplikacji
 
 Aplikacja przeznaczona dla osób, które czują **`filmowego kaca`** po świetnym, ostatnio obejrzanym filmie i nie mogą sobie poradzić z tęsknotą za bohaterami lub fabułą.
 
-Po wpisaniu tytułu *(lub jego częścią)*, aplikacja **wyszuka film z bazy**.
+Po wpisaniu tytułu _(lub jego częścią)_, aplikacja **wyszuka film z bazy**.
 Kolejny krok, to wyświetlenie informacji o **reżyserze** oraz **aktorach** występujących w filmie.
 
 **Aplikacja stara się podpowiedzieć, jakie filmy obejrzeć.**
-*(podpowiedzi dotyczą filmów tego samego gatunku filmu, reżysera lub tych samych aktorów)*
+_(podpowiedzi dotyczą filmów tego samego gatunku filmu, reżysera lub tych samych aktorów)_
 
 Użytkownik może użyć filtrów, które pozwalają mu na sprawniejsze przeglądanie listy filmów.
 
@@ -21,10 +17,9 @@ Użytkownik może użyć filtrów, które pozwalają mu na sprawniejsze przeglą
 - **`react`**
 - **`react-redux`**
 - **`redux`**
-- **`redux-thunk`**
+- **`redux-saga`**
+- **`ramda`**
 - **`prop-types`**
-
-
 
 ## Funkcje, które zamierzam zaimplementować
 
