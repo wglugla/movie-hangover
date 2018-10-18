@@ -1,18 +1,15 @@
-import React from 'react'
+import React from "react";
 
-import Movie from './Movie/Movie';
+import Movie from "./Movie/Movie";
 
-export const MoviesList = (props) => {
-  const { movies } = props;
+export const MoviesList = ({ movies }) => {
   return (
     <ul className="moviesList__list">
-      {movies.map((movie) => (
+      {movies.map(movie => (
         <Movie title={movie.title} id={movie.id} key={movie.id} />
       ))}
     </ul>
-  )
+  );
 };
 
-
-
-export default MoviesList
+export default MoviesList;
