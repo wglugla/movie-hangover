@@ -1,0 +1,45 @@
+import * as React from 'react';
+import { connect } from 'react-redux';
+
+import { withRouter } from 'react-router-dom';
+
+import { movieInfoActions } from '../../state/ducks/actions';
+import { staffActions } from '../../state/ducks/actions';
+
+import MovieDescription from '../../components/MovieDescription/MovieDescription';
+
+class MovieDescriptionContainer extends React.Component {
+  componentDidMount() {
+    this.props.fetchMovie(this.props.match.params.id);
+    this.props.fetchStaff(this.props.match.params.id);
+  }
+  render() {
+    return (
+      <MovieDescription
+        currentMovie={this.props.currentMovie}
+        director={this.props.director}
+        cast={this.props.cast}
+      />
+    );
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  fetchMovie: currentId =>
+    dispatch(movieInfoActions.fetchMovieInfoRequest(currentId)),
+  fetchStaff: currentId => dispatch(staffActions.fetchStaffRequest(currentId))
+});
+const mapStateToProps = state => {
+  return {
+    currentMovie: state.currentMovie.result,
+    director: state.currentStaff.director,
+    cast: state.currentStaff.cast
+  };
+};
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(MovieDescriptionContainer)
+);

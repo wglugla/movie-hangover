@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 export class AsyncComponent extends Component {
   state = {
@@ -8,9 +8,12 @@ export class AsyncComponent extends Component {
 
   componentDidMount() {
     if (!this.state.Component && !this.state.isLoading) {
-      this.setState({ 
-        isLoading: true
-      }, this.loadComponent);
+      this.setState(
+        {
+          isLoading: true
+        },
+        this.loadComponent
+      );
     }
   }
 
@@ -21,10 +24,10 @@ export class AsyncComponent extends Component {
         isLoading: false
       });
     });
-  }
+  };
   render() {
     const { Component } = this.state;
-    return ((Component) ? <Component {...this.props.componentProps} /> : null);
+    return Component ? <Component {...this.props.componentProps} /> : null;
   }
 }
 

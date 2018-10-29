@@ -1,6 +1,7 @@
-import * as React from "react";
-import { Field, reduxForm } from "redux-form";
-export default reduxForm({ form: "phraseForm" })(({ handleSubmit }) => {
+import * as React from 'react';
+import { Field, reduxForm } from 'redux-form';
+
+export default reduxForm({ form: 'phraseForm' })(({ handleSubmit }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>

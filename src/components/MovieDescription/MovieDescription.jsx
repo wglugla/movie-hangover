@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-export const MovieDescription = (props) => {
+export const MovieDescription = props => {
   const { title, overview, vote_average } = props.currentMovie;
   const { name } = props.director;
-  const cast = props.cast; 
+  const cast = props.cast;
   return (
     <div>
       <h1> {title} </h1>
@@ -13,8 +12,10 @@ export const MovieDescription = (props) => {
       <h3> Director: {name} </h3>
       <h3> Actors: </h3>
       <ul>
-        {cast.map(el => <li key={el.id}> {el.name} </li>)}
-      </ul> 
+        {cast.map(el => (
+          <li key={el.id}> {el.name} </li>
+        ))}
+      </ul>
     </div>
   );
 };

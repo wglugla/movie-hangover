@@ -1,21 +1,22 @@
-import * as React from "react";
-import { connect } from "react-redux";
- import MoviesList from "../../components/MoviesList/MoviesList";
- 
+import * as React from 'react';
+import { connect } from 'react-redux';
+
+import MoviesList from '../../components/MoviesList/MoviesList';
+
 class MoviesListContainer extends React.Component {
   componentDidMount() {}
-   render() {
+  render() {
     if (this.props.movies.length !== 0) {
       return <MoviesList movies={this.props.movies} />;
     }
-    return <div>We could not find anything :c</div>;
+    return <div> I'm so sorry, nothing to show... </div>;
   }
 }
- const mapDispatchToProps = dispatch => ({});
- const mapStateToProps = state => ({
+const mapDispatchToProps = dispatch => ({});
+const mapStateToProps = state => ({
   movies: state.movies.results
 });
- export default connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(MoviesListContainer);
