@@ -1,5 +1,7 @@
 # [PL] Struktura aplikacji movie-hangover
 
+[Przetestuj aplikację](https://wglugla.github.io/movie-hangover)
+
 ## Przeznaczenie aplikacji
 
 Aplikacja przeznaczona dla osób, które czują **`filmowego kaca`** po świetnym, ostatnio obejrzanym filmie i nie mogą sobie poradzić z tęsknotą za bohaterami lub fabułą.
@@ -25,7 +27,7 @@ Użytkownik może użyć filtrów, które pozwalają mu na sprawniejsze przeglą
 - [x] Formularz, dzięki któremu użytkownik otrzymuje odpowiedź od tmbD API z listą tytułów filmów zawierających wskazaną frazę.
 - [x] Lista filmów zgodnych z wyszukiwaną frazą
 - [x] Szczegółowe informacje o filmie
-- [ ] Lista filmów polecanych przez aplikację na podstawie danego filmu
+- [x] Lista filmów polecanych przez aplikację na podstawie danego filmu
 - [ ] Sortowanie listy filmów polecanych na podstawie oceny użytkowników tmbD lub nazwy, gatunku, trafności aktorów (trafność - ilość aktorów, którzy wystąpili w wybranym oraz poleconym filmie)
 - [ ] Filtry do listy filmów polecanych, pozwalających na przegląd filmów skojarzonych z gatunkiem, reżyserem bądź danym aktorem
 
