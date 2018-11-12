@@ -7,6 +7,7 @@ import { movieInfoActions } from '../../state/ducks/actions';
 import { staffActions } from '../../state/ducks/actions';
 
 import MovieDescription from '../../components/MovieDescription/MovieDescription';
+import SuggestedMovies from './SuggestedMovies/SuggestedMovies';
 
 class MovieDescriptionContainer extends React.Component {
   componentDidMount() {
@@ -15,11 +16,14 @@ class MovieDescriptionContainer extends React.Component {
   }
   render() {
     return (
-      <MovieDescription
-        currentMovie={this.props.currentMovie}
-        director={this.props.director}
-        cast={this.props.cast}
-      />
+      <div>
+        <MovieDescription
+          currentMovie={this.props.currentMovie}
+          director={this.props.director}
+          cast={this.props.cast}
+        />
+        <SuggestedMovies />
+      </div>
     );
   }
 }

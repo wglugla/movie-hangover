@@ -4,6 +4,7 @@ export const MovieDescription = props => {
   const { title, overview, vote_average } = props.currentMovie;
   const { name } = props.director;
   const cast = props.cast;
+  console.log(cast);
   return (
     <div>
       <h1> {title} </h1>
