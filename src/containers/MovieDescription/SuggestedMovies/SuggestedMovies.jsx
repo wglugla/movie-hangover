@@ -8,32 +8,36 @@ import { suggestedMoviesActions } from '../../../state/ducks/actions';
 import SuggestedMovies from '../../../components/MovieDescription/SuggestedMovies/SuggestedMovies';
 
 class SuggestedMoviesContainer extends React.Component {
- componentDidMount() {
-  this.props.fetchSuggestedMovies(this.props.match.params.id);
- }
- render() {
-  return (
-   <div>
-    <SuggestedMovies suggestedMovies={this.props.suggestedMovies} />
-   </div>
-  );
- }
+  componentDidMount() {
+    this.props.fetchSuggestedMovies(this.props.match.params.id);
+  }
+  render() {
+    return (
+      <div>
+        <SuggestedMovies
+          movies={this.props.suggestedMovies}
+          isFetching={this.props.isFetching}
+        />
+      </div>
+    );
+  }
 }
 
 const mapDispatchToProps = dispatch => ({
- fetchSuggestedMovies: movieId =>
-  dispatch(suggestedMoviesActions.fetchSuggestedMoviesRequest(movieId)),
+  fetchSuggestedMovies: movieId =>
+    dispatch(suggestedMoviesActions.fetchSuggestedMoviesRequest(movieId)),
 });
 
 const mapStateToProps = state => {
- return {
-  suggestedMovies: state.suggestedMovies.results,
- };
+  return {
+    isFetching: state.suggestedMovies.isFetching,
+    suggestedMovies: state.suggestedMovies.results,
+  };
 };
 
 export default withRouter(
- connect(
-  mapStateToProps,
-  mapDispatchToProps,
- )(SuggestedMoviesContainer),
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(SuggestedMoviesContainer),
 );

@@ -21,6 +21,7 @@ class MovieDescriptionContainer extends React.Component {
           currentMovie={this.props.currentMovie}
           director={this.props.director}
           cast={this.props.cast}
+          isFetching={this.props.isFetching}
         />
         <SuggestedMovies />
       </div>
@@ -31,19 +32,20 @@ class MovieDescriptionContainer extends React.Component {
 const mapDispatchToProps = dispatch => ({
   fetchMovie: currentId =>
     dispatch(movieInfoActions.fetchMovieInfoRequest(currentId)),
-  fetchStaff: currentId => dispatch(staffActions.fetchStaffRequest(currentId))
+  fetchStaff: currentId => dispatch(staffActions.fetchStaffRequest(currentId)),
 });
 const mapStateToProps = state => {
   return {
+    isFetching: state.currentStaff.isFetching,
     currentMovie: state.currentMovie.result,
     director: state.currentStaff.director,
-    cast: state.currentStaff.cast
+    cast: state.currentStaff.cast,
   };
 };
 
 export default withRouter(
   connect(
     mapStateToProps,
-    mapDispatchToProps
-  )(MovieDescriptionContainer)
+    mapDispatchToProps,
+  )(MovieDescriptionContainer),
 );

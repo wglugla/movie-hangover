@@ -6,17 +6,20 @@ import MoviesList from '../../components/MoviesList/MoviesList';
 class MoviesListContainer extends React.Component {
   componentDidMount() {}
   render() {
-    if (this.props.movies.length !== 0) {
-      return <MoviesList movies={this.props.movies} />;
-    }
-    return <div> I'm so sorry, nothing to show... </div>;
+    return (
+      <MoviesList
+        movies={this.props.movies}
+        isFetching={this.props.isFetching}
+      />
+    );
   }
 }
 const mapDispatchToProps = dispatch => ({});
 const mapStateToProps = state => ({
-  movies: state.movies.results
+  isFetching: state.movies.isFetching,
+  movies: state.movies.results,
 });
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(MoviesListContainer);

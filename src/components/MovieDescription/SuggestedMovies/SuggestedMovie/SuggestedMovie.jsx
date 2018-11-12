@@ -12,9 +12,9 @@ export const SuggestedMovie = props => {
   );
 };
 
-let reloadRoute = (id) => {
+let reloadRoute = id => {
   router.push({ pathname: '/e' });
   router.replace({ pathname: `/movie/${id}` });
-}
+};
 
 export default SuggestedMovie;

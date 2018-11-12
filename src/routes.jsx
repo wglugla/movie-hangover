@@ -7,17 +7,11 @@ import MovieDescription from './containers/MovieDescription/MovieDescription';
 import MoviesList from './containers/MoviesList/MoviesList';
 
 export default props => (
- <Router basename={`/movie-hangover`}>
-  <Switch>
-   <Route exact path={`/`} component={Home} />
-   <Route
-    path={`/moviesList`}
-    component={MoviesList}
-   />
-   <Route
-    path={`/movie/:id`}
-    component={MovieDescription}
-   />
-  </Switch>
- </Router>
+  <Router basename={`/movie-hangover`}>
+    <Switch>
+      <Route exact path={`/`} component={Home} />
+      <Route path={`/moviesList`} component={MoviesList} />
+      <Route path={`/movie/:id`} component={MovieDescription} />
+    </Switch>
+  </Router>
 );

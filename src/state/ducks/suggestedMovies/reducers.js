@@ -17,7 +17,7 @@ const actionHandlers = {
   FETCH_SUGGESTED_MOVIES_RECEIVE: (state, action) => {
     return R.evolve(R.__, state)({
       isFetching: R.F,
-      results: R.always(action.json),
+      results: R.always(action.json.results),
       error: R.always(action.error)
     });
   }
