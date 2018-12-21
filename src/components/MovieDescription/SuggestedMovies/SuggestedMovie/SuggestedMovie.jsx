@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, BrowserRouter as router } from 'react-router-dom';
-import styled from 'styled-components';
 
 export const SuggestedMovie = props => {
   const { id, title } = props;

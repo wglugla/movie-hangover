@@ -1,8 +1,10 @@
 import React from 'react';
 
 import Movie from './Movie/Movie';
+import Loader from '../../styled/StyledLoader';
 
 import styled from 'styled-components';
+
 
 const StyledSection = styled.section`
   padding: 1.5rem;
@@ -22,7 +24,7 @@ export const MoviesList = props => {
         </ul>
       </StyledSection>
     );
-  else return <div> Loading ... </div>;
+  else return <Loader />;
 };
 
 export default MoviesList;

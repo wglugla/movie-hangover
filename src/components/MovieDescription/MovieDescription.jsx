@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Loader from '../../styled/StyledLoader';
+
 export const MovieDescription = props => {
   console.log(props.currentMovie);
   const { title, overview, vote_average} = props.currentMovie;
@@ -25,7 +27,7 @@ export const MovieDescription = props => {
         </div>
       </div>
     );
-  else return <div> Loading ... </div>;
+  else return <Loader />;
 };
 
 export default MovieDescription;

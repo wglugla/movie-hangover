@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SuggestedMovie from './SuggestedMovie/SuggestedMovie';
+import Loader from '../../../styled/StyledLoader';
 
 import styled from 'styled-components';
 
@@ -21,7 +22,7 @@ export const SuggestedMovies = props => {
         </ul>
       </StyledSection>
     );
-  else return <div> Loading ... </div>;
+  else return <Loader />
 };
 
 export default SuggestedMovies;
