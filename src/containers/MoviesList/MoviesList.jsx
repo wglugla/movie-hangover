@@ -10,6 +10,8 @@ class MoviesListContainer extends React.Component {
       <MoviesList
         movies={this.props.movies}
         isFetching={this.props.isFetching}
+        totalResults={this.props.totalResults}
+        totalPages={this.props.totalPages}
       />
     );
   }
@@ -17,7 +19,9 @@ class MoviesListContainer extends React.Component {
 const mapDispatchToProps = dispatch => ({});
 const mapStateToProps = state => ({
   isFetching: state.movies.isFetching,
-  movies: state.movies.results,
+  movies: state.movies.results, 
+  totalResults: state.movies.totalResults,
+  totalPages: state.movies.totalPages
 });
 export default connect(
   mapStateToProps,

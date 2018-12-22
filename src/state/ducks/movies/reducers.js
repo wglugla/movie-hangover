@@ -4,7 +4,9 @@ import { createReducer } from '../../../helpers/redux';
 const initialState = {
   isFetching: false,
   results: [],
-  error: {}
+  error: {},
+  totalResults: 0,
+  totalPages: 0
 };
 
 const actionHandlers = {
@@ -18,7 +20,9 @@ const actionHandlers = {
     return R.evolve(R.__, state)({
       isFetching: R.F,
       results: R.always(action.json.results),
-      error: R.always(action.error)
+      error: R.always(action.error),
+      totalResults: R.always(action.json.total_results),
+      totalPages: R.always(action.json.total_pages)
     });
   }
 };
