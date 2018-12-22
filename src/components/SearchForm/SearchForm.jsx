@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Field, reduxForm } from "redux-form";
-import styled from "styled-components";
-import { Search } from "styled-icons/fa-solid/Search";
+import * as React from 'react';
+import { Field, reduxForm } from 'redux-form';
+import styled from 'styled-components';
+import { Search } from 'styled-icons/fa-solid/Search';
 
 const StyledForm = styled.form`
   padding: 2rem;
@@ -23,22 +23,22 @@ const StyledField = styled(Field)`
   text-align: center;
 `;
 
-export default reduxForm({ form: "phraseForm" })(({ handleSubmit }) => {
+export default reduxForm({ form: 'phraseForm' })(({ handleSubmit }) => {
   return (
     <div>
-      <StyledForm onSubmit={handleSubmit} className="columns">
-        <StyledControl className="control">
+      <StyledForm onSubmit={handleSubmit} className='columns'>
+        <StyledControl className='control'>
           <StyledField
-            className="input"
-            type="text"
-            component="input"
-            name="phrase"
-            id="phrase"
-            placeholder="Wprowadź nazwę filmu (lub jej część)"
+            className='input'
+            type='text'
+            component='input'
+            name='phrase'
+            id='phrase'
+            placeholder='Wprowadź nazwę filmu (lub jej część)'
           />
         </StyledControl>
-        <StyledButton type='submit' className="button is-primary is-outlined">
-          <Search size='1em'/>
+        <StyledButton type='submit' className='button is-primary is-outlined'>
+          <Search size='1em' />
         </StyledButton>
       </StyledForm>
     </div>

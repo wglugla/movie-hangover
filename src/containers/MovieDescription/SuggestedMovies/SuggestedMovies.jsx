@@ -25,19 +25,19 @@ class SuggestedMoviesContainer extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
   fetchSuggestedMovies: movieId =>
-    dispatch(suggestedMoviesActions.fetchSuggestedMoviesRequest(movieId)),
+    dispatch(suggestedMoviesActions.fetchSuggestedMoviesRequest(movieId))
 });
 
 const mapStateToProps = state => {
   return {
     isFetching: state.suggestedMovies.isFetching,
-    suggestedMovies: state.suggestedMovies.results,
+    suggestedMovies: state.suggestedMovies.results
   };
 };
 
 export default withRouter(
   connect(
     mapStateToProps,
-    mapDispatchToProps,
-  )(SuggestedMoviesContainer),
+    mapDispatchToProps
+  )(SuggestedMoviesContainer)
 );

@@ -5,8 +5,8 @@ export const SuggestedMovie = props => {
   const { id, title } = props;
   return (
     <Link onClick={reloadRoute} to={`/movie/${id}`}>
-      <li className="moviesList__element">
-        <h2 className="title is-5"> {title} </h2>
+      <li className='moviesList__element'>
+        <h2 className='title is-5'> {title} </h2>
       </li>
     </Link>
   );

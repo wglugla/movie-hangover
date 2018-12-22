@@ -22,7 +22,7 @@ export const SuggestedMovies = props => {
         </ul>
       </StyledSection>
     );
-  else return <Loader />
+  else return <Loader />;
 };
 
 export default SuggestedMovies;

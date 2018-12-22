@@ -1,5 +1,5 @@
-import React from "react";
-import SearchForm from "../../containers/SearchForm/SearchForm";
+import React from 'react';
+import SearchForm from '../../containers/SearchForm/SearchForm';
 
 export default props => {
   return (

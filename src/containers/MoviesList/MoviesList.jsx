@@ -19,11 +19,11 @@ class MoviesListContainer extends React.Component {
 const mapDispatchToProps = dispatch => ({});
 const mapStateToProps = state => ({
   isFetching: state.movies.isFetching,
-  movies: state.movies.results, 
+  movies: state.movies.results,
   totalResults: state.movies.totalResults,
   totalPages: state.movies.totalPages
 });
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(MoviesListContainer);

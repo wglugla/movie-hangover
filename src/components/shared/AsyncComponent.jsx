@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 export class AsyncComponent extends Component {
   state = {
     Component: null,
-    isLoading: false,
+    isLoading: false
   };
 
   componentDidMount() {
     if (!this.state.Component && !this.state.isLoading) {
       this.setState(
         {
-          isLoading: true,
+          isLoading: true
         },
-        this.loadComponent,
+        this.loadComponent
       );
     }
   }
@@ -21,7 +21,7 @@ export class AsyncComponent extends Component {
     return this.props.componentProvider().then(Component => {
       this.setState({
         Component,
-        isLoading: false,
+        isLoading: false
       });
     });
   };

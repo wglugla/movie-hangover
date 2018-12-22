@@ -6,9 +6,9 @@
  * @returns {string|null}
  */
 export function querystring(name, url = window.location.href) {
-  name = name.replace(/[[]]/g, "\\$&");
+  name = name.replace(/[[]]/g, '\\$&');
 
-  const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i");
+  const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)', 'i');
   const results = regex.exec(url);
 
   if (!results) {
@@ -16,10 +16,10 @@ export function querystring(name, url = window.location.href) {
   }
 
   if (!results[2]) {
-    return "";
+    return '';
   }
 
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
 /**
@@ -29,10 +29,9 @@ export function querystring(name, url = window.location.href) {
  * @returns {string}          Generated query string
  */
 export function urlencoded(object) {
-  return Object
-    .keys(object)
+  return Object.keys(object)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(object[key])}`)
-    .join("&");
+    .join('&');
 }
 
 /**
