@@ -10,8 +10,7 @@ const StyledDate = styled.p`
   color: #868686;
 `;
 
-export const Movie = props => {
-  const { id, title, poster, date, vote } = props;
+export const Movie = ({ id, title, poster, date, vote }) => {
   const imagePath = `http://image.tmdb.org/t/p/w185/${poster}`;
   return (
     <div>

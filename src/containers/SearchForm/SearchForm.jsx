@@ -16,7 +16,7 @@ export class SearchFormContainer extends Component {
 const mapDispatchToProps = dispatch => ({
   fetchMovies: phrase => dispatch(moviesActions.fetchMoviesRequest(phrase))
 });
-const mapStateToProps = state => ({});
+const mapStateToProps = () => ({});
 export default withRouter(
   connect(
     mapStateToProps,

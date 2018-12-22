@@ -9,9 +9,8 @@ const StyledSection = styled.section`
   padding: 1rem;
 `;
 
-export const SuggestedMovies = props => {
-  const { movies } = props;
-  if (props.isFetching === false)
+export const SuggestedMovies = ({ movies, isFetching }) => {
+  if (isFetching === false)
     return (
       <StyledSection>
         <h2 className='title is-4'> Suggested movies: </h2>

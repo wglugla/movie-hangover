@@ -3,7 +3,6 @@ import React from 'react';
 import Loader from '../../styled/StyledLoader';
 
 export const MovieDescription = props => {
-  console.log(props.currentMovie);
   const { title, overview, vote_average } = props.currentMovie;
   const { name } = props.director;
   const cast = props.cast;

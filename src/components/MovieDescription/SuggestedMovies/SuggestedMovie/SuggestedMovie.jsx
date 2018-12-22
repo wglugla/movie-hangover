@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, BrowserRouter as router } from 'react-router-dom';
 
-export const SuggestedMovie = props => {
-  const { id, title } = props;
+export const SuggestedMovie = ({ id, title }) => {
   return (
     <Link onClick={reloadRoute} to={`/movie/${id}`}>
       <li className='moviesList__element'>

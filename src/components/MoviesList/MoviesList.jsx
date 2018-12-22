@@ -9,9 +9,13 @@ const StyledSection = styled.section`
   padding: 1.5rem;
 `;
 
-export const MoviesList = props => {
-  const { movies, totalResults, totalPages } = props;
-  if (props.isFetching === false)
+export const MoviesList = ({
+  movies,
+  totalResults,
+  totalPages,
+  isFetching
+}) => {
+  if (isFetching === false)
     return (
       <StyledSection>
         <h3 className='title is-5'> Znaleziono {totalResults} filmów: </h3>
