@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const StyledPoster = styled.figure`
   width: 50%;
+  max-width: 300px;
   margin: 0 1.5rem;
 `;
 
