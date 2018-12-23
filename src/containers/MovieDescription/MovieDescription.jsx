@@ -15,6 +15,7 @@ class MovieDescriptionContainer extends React.Component {
     this.props.fetchStaff(this.props.match.params.id);
   }
   render() {
+    console.log(this.props.currentMovie);
     return (
       <div>
         <MovieDescription
