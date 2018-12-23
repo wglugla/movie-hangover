@@ -21,6 +21,9 @@ Użytkownik może użyć filtrów, które pozwalają mu na sprawniejsze przeglą
 - **`redux`**
 - **`redux-thunk`**
 - **`prop-types`**
+- **`redux-sga`**
+- **`ramda`**
+- **`redux-form`**
 
 ## Funkcje, które zamierzam zaimplementować
 
