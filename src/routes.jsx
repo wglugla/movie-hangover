@@ -4,14 +4,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import Home from './containers/Home/Home';
 import MovieDescription from './containers/MovieDescription/MovieDescription';
-import MoviesList from './containers/MoviesList/MoviesList';
 
 export default props => (
   <div>
     <Router basename={`/movie-hangover`}>
       <div>
-        <Route exact component={Home} />
-        <Route path={`/moviesList`} component={MoviesList} />
+        <Route exact path='/' component={Home} />
         <Route path={`/movie/:id`} component={MovieDescription} />
       </div>
     </Router>

@@ -6,7 +6,6 @@ import { moviesActions } from '../../state/ducks/actions';
 
 export class SearchFormContainer extends Component {
   submit = values => {
-    this.props.history.push(`/moviesList`);
     this.props.fetchMovies(values.phrase);
   };
   render() {

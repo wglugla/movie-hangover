@@ -13,8 +13,10 @@ export const MovieDescription = props => {
   const { title, overview, vote_average, poster_path } = props.currentMovie;
   const { name } = props.director;
   const cast = props.cast;
-  const imagePath = `http://image.tmdb.org/t/p/w185/${poster_path}`;
-  const imageAlt = `${title} poster`;
+  let imagePath = poster_path
+    ? `http://image.tmdb.org/t/p/w185/${poster_path}`
+    : '';
+  let imageAlt = title ? `${title} poster` : '';
   if (props.isFetching === false)
     return (
       <div className='card'>
