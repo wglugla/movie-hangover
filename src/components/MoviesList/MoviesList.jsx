@@ -42,6 +42,12 @@ export const MoviesList = ({
         <h3 className='title is-5'>
           Użyj wyszukiwarki powyżej aby rozpocząć wyszukiwanie.
         </h3>
+        <h4 className='title is-5'>Zadanie aplikacji:</h4>
+        <p>
+          Wpisz tytuł filmu, który ostatnio obejrzałeś (lub jego część). Wybierz
+          z listy i poznaj nowe filmy, podobne do tego, który ostatnio Ci się
+          spodobał.
+        </p>
       </StyledSection>
     );
   }

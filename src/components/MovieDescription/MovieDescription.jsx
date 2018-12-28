@@ -28,10 +28,10 @@ export const MovieDescription = props => {
         <div className='card-content'>
           <div className='content'>
             <h1 className='title is-4'> {title} </h1>
-            <h2 className='subtitle is-5'> Vote: {vote_average}</h2>
+            <h2 className='subtitle is-5'> Ocena: {vote_average}</h2>
             <p> {overview} </p>
-            <h3 className='title is-5'> Director: {name} </h3>
-            <h3 className='title is-5'> Actors: </h3>
+            <h3 className='title is-5'> Reżyser: {name} </h3>
+            <h3 className='title is-5'> Aktorzy: </h3>
           </div>
           <ul>
             {cast.map(el => (
