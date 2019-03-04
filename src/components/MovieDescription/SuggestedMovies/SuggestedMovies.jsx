@@ -6,8 +6,8 @@ import Loader from '../../../styled/StyledLoader';
 export const SuggestedMovies = ({ movies, isFetching }) => {
   if (isFetching === false)
     return (
-      <section>
-        <h2> Sugerowane do obejrzenia: </h2>
+      <section className='suggested'>
+        <h2 className='suggested__title'> Sugerowane do obejrzenia: </h2>
         <ul>
           {movies.map(movie => (
             <SuggestedMovie title={movie.title} id={movie.id} key={movie.id} />

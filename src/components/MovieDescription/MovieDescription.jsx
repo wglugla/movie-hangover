@@ -12,26 +12,20 @@ export const MovieDescription = props => {
   let imageAlt = title ? `${title} poster` : '';
   if (props.isFetching === false)
     return (
-      <div>
-        <div>
-          <figure>
+      <div className='movieDescription'>
+          <figure className='movieDescription__poster'>
             <img src={imagePath} alt={imageAlt} />
           </figure>
-        </div>
-        <h3>
-          <h3>
-            <h1> {title} </h1>
-            <h2> Ocena: {vote_average}</h2>
-            <p> {overview} </p>
-            <h3> Reżyser: {name} </h3>
-            <h3> Aktorzy: </h3>
-          </h3>
+          <h1 className='movieDescription__title'> {title} </h1>
+          <h2 className='movieDescription__vote'> Ocena: {vote_average}</h2>
+          <p className='movieDescription__desc'> {overview} </p>
+          <h3 className='movieDescription__subtitle'> Reżyser: {name} </h3>
+          <h3 className='movieDescription__subtitle'> Aktorzy: </h3>
           <ul>
             {cast.map(el => (
               <li key={el.id}> {el.name} </li>
             ))}
           </ul>
-        </h3>
       </div>
     );
   else return <Loader />;

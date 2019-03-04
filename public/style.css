@@ -69,3 +69,40 @@ body {
     width: 33%;
   }
 }
+
+.movieDescription__title {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.movieDescription__poster {
+  margin: 1rem 0;
+}
+
+.movieDescription__vote {
+  margin-bottom: .5rem;
+}
+
+.movieDescription__desc {
+  margin: 1rem 0;
+  max-width: 500px;
+}
+
+.movieDescription__subtitle {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.suggested {
+  padding: 2rem 0;
+}
+
+.suggested__title {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.suggested__link {
+  color: inherit;
+  display: block;
+}
