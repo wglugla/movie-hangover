@@ -4,8 +4,8 @@ import { Link, BrowserRouter as router } from 'react-router-dom';
 export const SuggestedMovie = ({ id, title }) => {
   return (
     <Link onClick={reloadRoute} to={`/movie/${id}`}>
-      <li className='moviesList__element'>
-        <h2 className='title is-5'> {title} </h2>
+      <li>
+        <h2> {title} </h2>
       </li>
     </Link>
   );

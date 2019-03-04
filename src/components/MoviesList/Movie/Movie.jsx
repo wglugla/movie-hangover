@@ -1,34 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-const StyledContent = styled.div`
-  padding: 0.5rem 0;
-`;
-
-const StyledDate = styled.p`
-  color: #868686;
-`;
 
 export const Movie = ({ id, title, poster, date, vote }) => {
   const imagePath = `http://image.tmdb.org/t/p/w185/${poster}`;
   return (
-    <div>
-      <Link to={`/movie/${id}`} className='card-content'>
-        <li className='media'>
-          <div className='media-left'>
-            <figure className='image is-64x64'>
+    <li className='movie'>
+      <Link className='movieLink' to={`/movie/${id}`}>
+          <div className='posterCase'>
+            <figure className='image'>
               <img src={imagePath} alt='Placeholder' />
             </figure>
           </div>
-          <StyledContent className='media-content'>
-            <h4 className='title is-6'>{title}</h4>
-            <StyledDate className='subtitle is-7'> {date} </StyledDate>
-            <p className='subtitle is-7'> Ocena: {vote} </p>
-          </StyledContent>
-        </li>
+          <div className='description'>
+            <h4 className='movieTitle'>{title}</h4>
+            <div className="movieInfo">
+              <p className='movieVote'> {vote} </p>
+              <p className='movieDate'> {date} </p>
+            </div>
+          </div>
       </Link>
-    </div>
+    </li>
   );
 };
 

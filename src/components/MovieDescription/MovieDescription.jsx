@@ -1,13 +1,6 @@
 import React from 'react';
 
 import Loader from '../../styled/StyledLoader';
-import styled from 'styled-components';
-
-const StyledPoster = styled.figure`
-  width: 50%;
-  max-width: 300px;
-  margin: 0 1.5rem;
-`;
 
 export const MovieDescription = props => {
   const { title, overview, vote_average, poster_path } = props.currentMovie;
@@ -19,26 +12,26 @@ export const MovieDescription = props => {
   let imageAlt = title ? `${title} poster` : '';
   if (props.isFetching === false)
     return (
-      <div className='card'>
-        <div className='card-image'>
-          <StyledPoster className='image'>
+      <div>
+        <div>
+          <figure>
             <img src={imagePath} alt={imageAlt} />
-          </StyledPoster>
+          </figure>
         </div>
-        <div className='card-content'>
-          <div className='content'>
-            <h1 className='title is-4'> {title} </h1>
-            <h2 className='subtitle is-5'> Ocena: {vote_average}</h2>
+        <h3>
+          <h3>
+            <h1> {title} </h1>
+            <h2> Ocena: {vote_average}</h2>
             <p> {overview} </p>
-            <h3 className='title is-5'> Reżyser: {name} </h3>
-            <h3 className='title is-5'> Aktorzy: </h3>
-          </div>
+            <h3> Reżyser: {name} </h3>
+            <h3> Aktorzy: </h3>
+          </h3>
           <ul>
             {cast.map(el => (
               <li key={el.id}> {el.name} </li>
             ))}
           </ul>
-        </div>
+        </h3>
       </div>
     );
   else return <Loader />;
