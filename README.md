@@ -1,7 +1,5 @@
 # [PL] Struktura aplikacji movie-hangover
 
-[Przetestuj aplikację](https://wglugla.github.io/movie-hangover)
-
 ## Przeznaczenie aplikacji
 
 Aplikacja przeznaczona dla osób, które czują **`filmowego kaca`** po świetnym, ostatnio obejrzanym filmie i nie mogą sobie poradzić z tęsknotą za bohaterami lub fabułą.
