@@ -1,5 +1,7 @@
 # [PL] Struktura aplikacji movie-hangover
 
+> This repository is archived. It means that I don't work on it anymore. I publish it to show my programming progress.
+
 ## Przeznaczenie aplikacji
 
 Aplikacja przeznaczona dla osób, które czują **`filmowego kaca`** po świetnym, ostatnio obejrzanym filmie i nie mogą sobie poradzić z tęsknotą za bohaterami lub fabułą.
